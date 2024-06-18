@@ -5,7 +5,7 @@ const SideDiv = () => {
       <div className='sideDiv pt-4'>
         <div className='firstSideDiv'>
             <div className='d-flex firstSide align-items-center'>
-                <img src="chatLogo.png" width="40px" className='me-1'/>
+                <img src="chatLogo.png" width="40px" className='me-1' alt=""/>
                 <h5 className="text-dark">MyGPT</h5>
             </div>
             <div className='mt-3 me-3 ms-2'>
