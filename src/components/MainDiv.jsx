@@ -9,7 +9,6 @@ const genAi = new GoogleGenerativeAI("AIzaSyDXYBL6yUkKzVuK2U3hmzJOHJsZ1MVH0Rw");
 console.log(process.env.Gemini_key);
 const messagesEndRef = useRef(null);
 let r;
-let answer;
 const sendMsg=async (value) => {
   try {
     const model = await genAi.getGenerativeModel({
