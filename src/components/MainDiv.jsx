@@ -15,7 +15,6 @@ const sendMsg=async (value) => {
       model: "gemini-1.5-pro",
     })
     r = await model.generateContent(`${value}`);
-    let answ=r.response.text();
     console.log(r.response.text());
     return r.response.text();
   } catch (error) {
