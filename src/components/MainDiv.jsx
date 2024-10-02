@@ -5,17 +5,17 @@ const MainDiv = () => {
     const [loader, setLoader] = useState(false)
     const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-const genAi = new GoogleGenerativeAI("AIzaSyDXYBL6yUkKzVuK2U3hmzJOHJsZ1MVH0Rw");
-console.log(process.env.Gemini_key);
-const messagesEndRef = useRef(null);
-let r;
-const sendMsg=async (value) => {
-  try {
+    const genAi = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
+    // console.log(process.env.Gemini_key);
+    const messagesEndRef = useRef(null);
+    let r;
+    const sendMsg=async (value) => {
+      try {
     const model = await genAi.getGenerativeModel({
       model: "gemini-1.5-pro",
     })
     r = await model.generateContent(`${value}`);
-    console.log(r.response.text());
+    // console.log(r.response.text());
     return r.response.text();
   } catch (error) {
     console.error('Error:', error);
